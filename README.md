@@ -123,6 +123,42 @@ The system will:
 3. Display current match state
 4. Accept user queries in real-time
 
+### Sample Session
+
+```
+$ python main.py
+
+🏏 Cricket Commentary Agent System
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+Match: India vs South Africa | Day 5 | 4th Innings
+
+[Auto-polling: Cricscore API every 30s]
+[Event] Ball 76.3 — Jaiswal: 4 runs (boundary through covers)
+
+📊 Match State:
+  India: 312/6 (76.3 overs) | Target: 421
+  Batting: Jaiswal 78*(142), Ashwin 12*(31)
+  Need: 109 runs from 141 balls
+
+> What are India's chances?
+
+🤖 [Probability Agent]
+  Win:  18.3%  ████░░░░░░░░░░░░
+  Draw: 41.7%  █████████░░░░░░░
+  Loss: 40.0%  ████████░░░░░░░░
+
+  India's best hope is a draw. With 6 wickets down and
+  23.3 overs remaining, Jaiswal needs to bat through.
+  If he falls, draw probability drops to ~15%.
+
+> How was Sudharsan dismissed?
+
+🤖 [Tactical Agent]
+  Sudharsan was caught at slip off Rabada's outswinger
+  in the 62nd over. The ball pitched on a good length
+  and moved away late — a classic seam bowling dismissal.
+```
+
 ### Example Queries
 
 **Stats Queries:**
